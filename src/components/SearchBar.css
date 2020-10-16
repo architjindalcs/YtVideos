@@ -1,0 +1,9 @@
+.form-control{
+    height: 40px;
+    width: 60vw;
+    margin: auto;
+}
+::placeholder
+{
+    font-size: 20px;
+}

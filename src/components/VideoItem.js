@@ -9,10 +9,10 @@ const VideoItem=(props)=>
         onVideoSelect(video)
     }}>
         <div className="col-4">
-        <img src={video.snippet.thumbnails.medium.url} className="img-thumbnail"/>
+        <img src={video.snippet.thumbnails.medium.url} className="img-thumbnail" alt={video.snippet.title}/>
         </div>
         <div className="col-6">
-       <h4 style={{marginTop: "2%"}}>{video.snippet.title}</h4> 
+       <h4 style={{marginTop: "1%"}}>{video.snippet.title}</h4> 
         </div>
         </div>)
 }

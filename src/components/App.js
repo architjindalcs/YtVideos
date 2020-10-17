@@ -9,6 +9,10 @@ class App extends React.Component
         videos: [],
         selectedVideo: null
     }
+    componentDidMount()
+    {
+        this.callback('Computer Science English')
+    }
     callback= async(searchquery)=>
     {
      
@@ -18,7 +22,8 @@ class App extends React.Component
             }
         })
         this.setState({
-            videos: response.data.items
+            videos: response.data.items,
+            selectedVideo: response.data.items[0]
         })
         console.log(this.state.videos)
     
@@ -33,8 +38,15 @@ class App extends React.Component
     {
         return(<div className="container" style={{marginTop: "1.5rem"}}>
             <SearchBar callback={this.callback}/>
-            <VideoDetail video={this.state.selectedVideo} />
+            <div className="row">
+                <div className="col-lg-7 col-md-12" >
+                <VideoDetail video={this.state.selectedVideo} />
+                </div>
+                <div className="col-lg-5 col-md-12">          
             <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
+                </div>
+            </div>
+
         </div>)
     }
 }

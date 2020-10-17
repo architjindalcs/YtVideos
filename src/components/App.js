@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar"
 import youtube from "../apis/youtube"
 import VideoList from "./VideoList"
 import VideoDetail from "./VideoDetail"
+import VideoListAdd from "./VideoListAdd"
 class App extends React.Component
 {
     state={
@@ -45,6 +46,9 @@ class App extends React.Component
                 <div className="col-lg-5 col-md-12">          
             <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
                 </div>
+            <div className="col-12">
+            <VideoListAdd onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
+            </div>
             </div>
 
         </div>)

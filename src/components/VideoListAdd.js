@@ -14,8 +14,7 @@ const VideoList=(props)=>
     {
         return <VideoItem key={video.id.videoId} onVideoSelect={onVideoSelect} video={video} />
     })
-    console.log("Hey Man! Mapped List",mappedList.slice(0,4),typeof(mappedList)) 
-    return (<div>{mappedList.slice(0,4)}</div>)
+    return (<div>{mappedList.slice(4,30)}</div>)
 }
 
 export default VideoList
